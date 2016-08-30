@@ -5,12 +5,18 @@ let config = {}
 let {exec} = require('child_process')
 let {platform} = require('os')
 
-fs.readFile('inventory.json', 'utf8', installer)
+fs.readFile('config.json', 'utf8', installer)
+
+function installer (err, data) {
+  if (err) throw err
+  config = JSON.parse(data)
+  menu()
+}
 
 function menu () {
   console.log('\033[2J\033c')
-  console.log(splash(`Installing ${inventory.owner}\'s Dotfiles`))
-  inventory.dotfiles.forEach(function (dotfile, i) {
+  console.log(splash(`Installing ${config.owner}\'s Dotfiles`))
+  config.dotfiles.forEach(function (dotfile, i) {
     if (dotfile.platform === 'any' || dotfile.platform === platform()) {
       let check = ' '
       if (dotfile.checked) {check = 'x'}
@@ -18,12 +24,6 @@ function menu () {
     }
   })
   console.log('\nType number to select/unselect dotfile, [q] to quit, [i] to install:')
-}
-
-function installer (err, data) {
-  if (err) throw err
-  inventory = JSON.parse(data)
-  menu()
 }
 
 function splash (string) {
@@ -45,7 +45,7 @@ stdin.on('data', function (chunk) {
     return
   }
   chunk = +chunk
-  if (isNaN(chunk) || chunk >= dotfiles.length) return
-  inventory.dotfiles[chunk].checked = !inventory.dotfiles[chunk].checked
+  if (isNaN(chunk) || chunk >= config.dotfiles.length) return
+  config.dotfiles[chunk].checked = !config.dotfiles[chunk].checked
   menu()
 })
