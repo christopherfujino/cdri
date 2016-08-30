@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christopherfujino/dotfiles.git"
+    "url": "git+https://github.com/christopherfujino/cdri.git"
   },
   "author": "Christopher Fujino",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/christopherfujino/dotfiles/issues"
+    "url": "https://github.com/christopherfujino/cdri/issues"
   },
-  "homepage": "https://github.com/christopherfujino/dotfiles#readme",
+  "homepage": "https://github.com/christopherfujino/cdri#readme",
   "dependencies": {}
 }
