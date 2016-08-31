@@ -2,7 +2,7 @@
   "name": "cdri",
   "version": "0.1.0",
   "description": "Chris' Dotfiles Repository Installer",
-  "main": "index.js",
+  "main": "cdri.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
