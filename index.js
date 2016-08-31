@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 let fs = require('fs')
 let config = {}
 let {exec} = require('child_process')
