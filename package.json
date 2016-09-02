@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Chris' Dotfiles Repository Installer",
   "bin": {
-    "cdri": "./lib/index.js"
+    "cdri": "./bin/cdri"
   },
   "main": "./lib/index.js",
   "scripts": {

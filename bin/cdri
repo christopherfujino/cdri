@@ -4,4 +4,4 @@
 
 var app = require('../lib/index.js').app
 
-console.log(app)
+app()
