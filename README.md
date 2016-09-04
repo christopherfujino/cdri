@@ -1,6 +1,6 @@
 # Chris' Dotfile Repository Installer
 
-## First-time Setup
+## First-Time Setup
 
 Create a directory with the configuration files you wish to install.
 
