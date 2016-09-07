@@ -41,18 +41,18 @@ Create a `config.json` file in the repository describing the configuration files
   "owner": "Christopher Fujino",
   "dotfiles" : [
     {
-      "name" : ".bashrc",
+      "name" : ".bashrc.linux",
       "target" : "~/.bashrc",
       "platform" : "linux"
     },
     {
-      "name" : ".vimrc",
-      "target" : "~/.vimrc"
+      "name" : ".bashrc.osx",
+      "target" : "~/.bashrc",
+      "platform" : "darwin"
     },
     {
-      "name" : ".Xresources",
-      "target" : "~/.Xresources",
-      "platform" : "linux"
+      "name" : ".vimrc",
+      "target" : "~/.vimrc"
     }
   ]
 }
