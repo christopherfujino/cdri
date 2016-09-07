@@ -1,4 +1,4 @@
-# Chris' Dotfile Repository Installer
+# Command-line Dotfile Repository Installer
 
 ## First-Time Setup
 
@@ -7,9 +7,9 @@ Create a directory with the configuration files you wish to install.
 ```bash
 $ mkdir dotfiles
 $ cd dotfiles
-$ cp ~/.bashrc ./
-$ cp ~/.vimrc ./
-$ cp ~/.npmrc ./
+$ mv ~/.bashrc ./
+$ mv ~/.vimrc ./
+$ mv ~/.npmrc ./
 ```
 
 *Optional*: initialize it as a git repository.
@@ -31,6 +31,34 @@ Install the cdri package using `npm`, saving it as a dependency.
 ```bash
 $ npm install --save cdri
 ```
+
+Create a `config.json` file in the repository describing the configuration files you will be tracking. Here is an example:
+
+```json
+{
+  "owner": "Christopher Fujino",
+  "dotfiles" : [
+    {
+      "name" : ".bashrc",
+      "target" : "~/.bashrc",
+      "platform" : "linux"
+    },
+    {
+      "name" : ".vimrc",
+      "target" : "~/.vimrc"
+    },
+    {
+      "name" : ".Xresources",
+      "target" : "~/.Xresources",
+      "platform" : "linux"
+    }
+  ]
+}
+```
+
+The "dotfiles" property is an array of objects, each object describing a configuration file. In these objects, the "name" property is the filename in the repository, the "target" property is the filepath and filename of the symlink to be installed. Paths should be absolute, though tildes are allowed. The "platform" property, if included, should be either "linux", "darwin", "win32", or "any". The default is "any".
+
+You can also copy the example config file with `cp node_modules/cdri/config.json.example ./config.json` and then editing the fields to fit your needs.
 
 Run the script.
 
@@ -56,8 +84,3 @@ $ cd dotfiles
 $ npm install
 $ npm run cdri
 ```
-
-## To-do
-
-* Check if inventory.json exists
-* Verify files in inventory.json exist
