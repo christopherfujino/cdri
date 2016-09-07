@@ -1,5 +1,7 @@
 # Command-line Dotfile Repository Installer
 
+Command-line tool to symlink selected config files from a local repository to the target location on the filesystem.
+
 ## First-Time Setup
 
 Create a directory with the configuration files you wish to install.
