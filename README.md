@@ -28,10 +28,10 @@ Initialize the repository as an npm package, with a package.json file.
 $ npm init
 ```
 
-Install the cdri package using `npm`, saving it as a dependency.
+Install the cdri package using `npm` globally.
 
 ```bash
-$ npm install --save cdri
+$ npm install -g cdri
 ```
 
 Create a `config.json` file in the repository describing the configuration files you will be tracking. Here is an example:
@@ -62,10 +62,10 @@ The "dotfiles" property is an array of objects, each object describing a configu
 
 You can also copy the example config file with `cp node_modules/cdri/config.json.example ./config.json` and then editing the fields to fit your needs.
 
-Run the script.
+Run the script in the dotfiles repo.
 
 ```bash
-$ npm run cdri
+$ cdri
 ```
 
 *Optional*: if you're using git, create a `.gitignore` file including the directory `node_modules`. Commit the rest of the repository.
