@@ -82,7 +82,7 @@ After you've completed the initial setup, you can now reproduce your setup on ad
 
 ```bash
 $ git clone https://github.com/username/dotfiles.git
+$ npm install -g cdri
 $ cd dotfiles
-$ npm install
-$ npm run cdri
+$ cdri
 ```
