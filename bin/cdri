@@ -2,6 +2,11 @@
 
 'use strict'
 
-var app = require('../lib/index.js').app
+var bigVersion = +process.version.split('v')[1].split('.')[0]
+if (bigVersion >= 6) {
+  var app = require('../lib/index.es6.js').app
+} else {
+  var app = require('../lib/index.js').app
+}
 
 app()
