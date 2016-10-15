@@ -22,12 +22,6 @@ $ git add .
 $ git commit -m 'initial commit'
 ```
 
-Initialize the repository as an npm package, with a package.json file.
-
-```bash
-$ npm init
-```
-
 Install the cdri package using `npm` globally.
 
 ```bash
