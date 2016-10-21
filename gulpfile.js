@@ -1,11 +1,13 @@
 const gulp = require('gulp')
 const babel = require('gulp-babel')
 const shell = require('gulp-shell')
+const rename = require('gulp-rename')
 
 gulp.task('babel', () => {
   gulp.src('lib/index.es6.js')
     .pipe(babel({presets: ['es2015']}))
-    .pipe(gulp.dest('lib/index.js'))
+    .pipe(rename('index.js'))
+    .pipe(gulp.dest('lib'))
 })
 
 gulp.task('install', shell.task('npm install -g .'))
