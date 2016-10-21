@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel ./lib/index.es6.js -o ./lib/index.js",
     "build": "babel ./lib/index.es6.js -o ./lib/index.js; npm install -g .",
-    "standard": "standard lib/index.es6.js | snazzy; echo ''"
+    "standard": "clear; standard lib/index.es6.js | snazzy; echo ''"
   },
   "repository": {
     "type": "git",
