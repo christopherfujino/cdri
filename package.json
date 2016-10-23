@@ -22,7 +22,9 @@
     "url": "https://github.com/christopherfujino/cdri/issues"
   },
   "homepage": "https://github.com/christopherfujino/cdri#readme",
-  "dependencies": {},
+  "dependencies": {
+    "async": "^2.1.2"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
     "gulp": "^3.9.1",
