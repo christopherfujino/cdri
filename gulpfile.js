@@ -5,10 +5,10 @@ const shell = require('gulp-shell')
 const rename = require('gulp-rename')
 
 gulp.task('babel', ['rollup'], () => {
-  gulp.src('lib/bundle.es6.js')
+  gulp.src('lib/dist/bundle.es6.js')
     .pipe(babel({presets: ['es2015']}))
     .pipe(rename('bundle.js'))
-    .pipe(gulp.dest('lib'))
+    .pipe(gulp.dest('lib/dist'))
 })
 
 //gulp.task('watch', () => {
@@ -21,7 +21,7 @@ gulp.task('rollup', () => {
   }).then((bundle) => {
     bundle.write({
       format: "cjs",
-      dest: "./lib/bundle.es6.js"
+      dest: "./lib/dist/bundle.es6.js"
     })
   })
 })
