@@ -4,9 +4,9 @@
 
 var bigVersion = +process.version.split('v')[1].split('.')[0]
 if (bigVersion >= 6) {  // if your node supports es6
-  var app = require('../lib/index.es6.js').app
+  var app = require('../lib/bundle.es6.js').app
 } else {
-  var app = require('../lib/index.js').app
+  var app = require('../lib/bundle.js').app
 }
 
 app()
