@@ -3,7 +3,7 @@
   "dotfiles" : [
     {
       "name" : "sample.rc",
-      "target" : "./output.sample.rc",
+      "target" : "./target/output.sample.rc",
       "platform" : "any"
     }
   ]
