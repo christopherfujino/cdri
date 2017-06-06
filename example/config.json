@@ -2,14 +2,9 @@
   "owner": "Christopher Fujino",
   "dotfiles" : [
     {
-      "name" : ".bash_profile",
-      "target" : "~/.bash_profile",
-      "platform" : "linux"
-    },
-    {
-      "name" : ".bashrc",
-      "target" : "~/.bashrc",
-      "platform" : "linux"
+      "name" : "sample.rc",
+      "target" : "./output.sample.rc",
+      "platform" : "any"
     }
   ]
 }
