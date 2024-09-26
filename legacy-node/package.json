@@ -28,7 +28,7 @@
     "gulp-babel": "^6.1.2",
     "gulp-rename": "^1.2.2",
     "gulp-shell": "^0.5.2",
-    "rollup": "^0.41.6",
+    "rollup": "^2.79.2",
     "snazzy": "^5.0.0",
     "standard": "^8.1.0"
   },
